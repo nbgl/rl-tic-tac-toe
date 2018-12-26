@@ -1,10 +1,10 @@
 # rl-tic-tac-toe
 
-This is an idea for a project that teaches basic reinforcement learning to high schoolers. At one stage I was planning it for an [NCSS](https://ncss.edu.au/summer-school) Masterclass, but it may be too complicated.
+This is an idea for a project that teaches basic reinforcement learning to high schoolers. At one stage I was planning it for an [NCSS](https://ncss.edu.au/summer-school) Masterclass, but it may be too complicated. I&rsquo;m putting it on GitHub in case someone finds it useful &#x1F937;
 
 It is aimed at bright students, who know basic Python and high-school level maths. It is dependent on base Python 3 only and does not require third-party packages. Students should be able to complete this in a day from scratch, or a few hours if they are given a template that implements the boring bits.
 
-Students will learn the basic concepts of reinforcement learning (agent, state, action, reward) as well as basic Q-learning.
+Students will learn the basic concepts of reinforcement learning (agent, state, action, reward) as well as basic _Q_-learning.
 
 Of course, students vary in their capabilities. We need to cater to students who are beginners to computer science, as well as to more experienced programmers (without anyone getting lost or bored). There are multiple stages to the exercise. A student who completes at least two can say that they used reinforcement learning to play tic-tac-toe!
 
@@ -29,7 +29,7 @@ The action that we choose, _a_, is the one with the highest value _Q_(_s_, _a_).
 
 We should theoretically be able to train our agent by playing against it repeatedly. Note that it may take a while to train, so it&rsquo;s fairly infeasible to do by hand. So we play it off against itself.
 
-## Stage 3:
+## Stage 3: extensions
 Three components that as extensions for faster students:
 - We introduce _&epsilon;_-greedy and have agent choose a random action _&epsilon;_ of the time when training. This is a good time to talk about exploration vs exploitation.
 - We introduce the learning rate _&alpha;_ and discount rate _&gamma;_. Our update formula then becomes _Q_(_s_, _a_) := (1 &minus; _&alpha;_) _Q_(_s_, _a_) + _&alpha;_ (_r_ &minus; _&gamma;_ max<sub>_a_&prime;</sub>Q(_s_&prime;, _a_&prime;)).
